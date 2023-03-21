@@ -28,7 +28,7 @@ gray = cv2.cvtColor(blurred, cv2.COLOR_BGR2GRAY)
 threshold = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
 
 # Apply the Canny edge detection algorithm to the thresholded image
-edges = cv2.Canny(threshold, 100, 200)
+edges = cv2.Canny(threshold, 1, 250)
 
 # Dilate the edges to make them thinner
 kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
@@ -39,5 +39,6 @@ cartoon = cv2.bitwise_and(img, img, mask=dilated)
 
 # Display the cartoonized image
 cv2.imshow('Cartoon', cartoon)
+cv2.imwrite('cartoon_canny_like_v2.jpg', cartoon)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
