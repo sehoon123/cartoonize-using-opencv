@@ -1,8 +1,7 @@
 import cv2
 
 # Read the image and downscale it
-img = cv2.imread('image.jpg')
-img = cv2.resize(img, None, fx=0.5, fy=0.5)
+img = cv2.imread('elon.png')
 
 # Apply a bilateral filter to the image
 filtered = cv2.bilateralFilter(img, 9, 75, 75)

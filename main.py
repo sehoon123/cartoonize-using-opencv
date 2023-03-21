@@ -1,7 +1,7 @@
 import cv2
 
 # Read the image
-img = cv2.imread('image.jpg')
+img = cv2.imread('elon.png')
 
 # Convert the image to grayscale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
