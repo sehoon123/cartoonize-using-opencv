@@ -1,4 +1,4 @@
-Cartoonizer using OpenCV
+# Cartoonizer using OpenCV
 This is a Python script that uses the OpenCV library to cartoonize an image. The script applies a color quantization filter to the image to reduce the number of colors, then applies a bilateral filter and a median blur to create a simplified version of the image. The Canny edge detection algorithm is then used to detect the edges in the image, which are dilated to create thicker lines. The result is a cartoonized version of the original image with simplified colors and thicker lines.
 
 Installation
@@ -20,11 +20,14 @@ Replace input_image.jpg with the path to your input image file. The output will 
 Examples
 Here are some examples of images that were cartoonized using this script:
 
-original 
+<p>original</p>
+
 ![original](cartoon_original.jpg)
 
-fixed
+<p>fixed</p>
+
 ![fixed](cartoon_fixed.jpg)
 
-new
+<p>new</p>
+
 ![new](cartoon_canny_like_v2.jpg)
