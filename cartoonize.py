@@ -30,33 +30,14 @@ threshold = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THR
 # Apply the Canny edge detection algorithm to the thresholded image
 edges = cv2.Canny(threshold, 100, 200)
 
-# Dilate the edges to make them thicker
-kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+# Dilate the edges to make them thinner
+kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
 dilated = cv2.dilate(edges, kernel, iterations=2)
 
 # Merge the edge-detected image with the original image using bitwise AND operator
 cartoon = cv2.bitwise_and(img, img, mask=dilated)
 
-# Convert the merged image to grayscale and invert it to create a black and white effect
-bw_cartoon = cv2.cvtColor(cartoon, cv2.COLOR_BGR2GRAY)
-bw_cartoon = cv2.bitwise_not(bw_cartoon)
-
-# Apply a halftone effect to the black and white cartoonized image
-height, width = bw_cartoon.shape
-halftone = np.zeros((height, width, 3), np.uint8)
-for i in range(height):
-    for j in range(width):
-        value = bw_cartoon[i, j]
-        if value < 64:
-            halftone[i, j] = (0, 0, 0)  # black
-        elif value < 128:
-            halftone[i, j] = (0, 0, 255)  # blue
-        elif value < 192:
-            halftone[i, j] = (0, 255, 0)  # green
-        else:
-            halftone[i, j] = (255, 255, 255)  # white
-
-# Display the halftone cartoonized image
-cv2.imshow('Halftone Cartoon', halftone)
+# Display the cartoonized image
+cv2.imshow('Cartoon', cartoon)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
