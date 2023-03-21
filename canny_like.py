@@ -32,5 +32,6 @@ bw_cartoon = cv2.bitwise_not(bw_cartoon)
 
 # Display the black and white cartoonized image
 cv2.imshow('Black and White Cartoon', bw_cartoon)
+cv2.imwrite('cartoon_canny_like_v1.jpg', bw_cartoon)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
