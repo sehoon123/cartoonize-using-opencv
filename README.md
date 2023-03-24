@@ -20,14 +20,18 @@ Replace input_image.jpg with the path to your input image file. The output will 
 Examples
 Here are some examples of images that were cartoonized using this script:
 
-<p>original</p>
+<p>cartoon_original</p>
 
 ![original](cartoon_original.jpg)
 
-<p>fixed</p>
+<p>cartoon_fixed</p>
 
 ![fixed](cartoon_fixed.jpg)
 
-<p>new</p>
+<p>cartoon_canny_like_v1</p>
+
+![new](cartoon_canny_like_v1.jpg)
+
+<p>cartoon_canny_like_v2</p>
 
 ![new](cartoon_canny_like_v2.jpg)
