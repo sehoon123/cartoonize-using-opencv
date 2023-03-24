@@ -22,16 +22,16 @@ Here are some examples of images that were cartoonized using this script:
 
 <p>cartoon_original</p>
 
-![original](cartoon_original.jpg)
+![cartoon_original](cartoon_original.jpg)
 
 <p>cartoon_fixed</p>
 
-![fixed](cartoon_fixed.jpg)
+![cartoon_fixed](cartoon_fixed.jpg)
 
 <p>cartoon_canny_like_v1</p>
 
-![new](cartoon_canny_like_v1.jpg)
+![cartoon_canny_like_v1](cartoon_canny_like_v1.jpg)
 
 <p>cartoon_canny_like_v2</p>
 
-![new](cartoon_canny_like_v2.jpg)
+![cartoon_canny_like_v2](cartoon_canny_like_v2.jpg)
