@@ -7,7 +7,7 @@ img = cv2.imread('elon.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # Apply the Canny edge detection algorithm to the grayscale image
-edges = cv2.Canny(gray, 100, 200)
+edges = cv2.Canny(gray, 100, 300)
 
 # Dilate the edges to make them thicker
 kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
